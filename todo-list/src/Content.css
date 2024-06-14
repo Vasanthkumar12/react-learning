@@ -20,7 +20,8 @@
     font-size: 1.1em;
 }
 
-#todo-msgs {
+#msg {
     font-size: 1.3em;
     color: white;
+    margin-left: 50px;
 }
