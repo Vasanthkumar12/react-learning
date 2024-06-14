@@ -1,0 +1,26 @@
+#content {
+    flex: 1;
+}
+
+#todo-msg {
+    margin-left: 50px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 1.3em;
+}
+
+#btn {
+    background-color: rgb(4, 47, 241);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
+}
+
+#todo-msgs {
+    font-size: 1.3em;
+    color: white;
+}
