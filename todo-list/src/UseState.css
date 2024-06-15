@@ -1,0 +1,25 @@
+.countbtns {
+    width: 50px;
+    color: rgb(67, 71, 74);
+    font-size: 1.2em;
+    background-color: aliceblue;
+    margin: 0 20px;
+}
+
+.cbtn1 {
+    margin-left: 0px;
+    
+}
+
+.usestate {
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+#box1 {
+    margin-left: 10px;
+}
+
+span {
+    font-size: 1.7em;
+}
