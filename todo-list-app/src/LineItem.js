@@ -11,6 +11,7 @@ function LineItem({todoItem, handleChange, handleDelete}) {
                 role= "button"
                 tabIndex="0"
                 onClick={()=>handleDelete(todoItem.id)}
+                aria-label={`Delete ${todoItem.todo}`}
             />
     </li>
   )
