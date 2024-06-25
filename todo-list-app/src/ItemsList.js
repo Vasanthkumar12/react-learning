@@ -7,6 +7,7 @@ function ItemsList({todos, handleChange, handleDelete}) {
        { todos.map(todoItem =>
             <LineItem
                 todoItem = {todoItem}
+                key = {todoItem.id}
                 handleChange = {handleChange}
                 handleDelete = {handleDelete}
             />

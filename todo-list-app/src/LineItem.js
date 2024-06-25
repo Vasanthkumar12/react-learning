@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa"
 
 function LineItem({todoItem, handleChange, handleDelete}) {
   return (
-    <li className='lineItem' key={todoItem.id}>
+    <li className='lineItem'>
             <input type='checkbox' onChange={() => handleChange(todoItem.id)} checked={todoItem.checked} />
             <label id='todo'  style={todoItem.checked ? {textDecoration:"line-through"}: {textDecoration:"underline"}} onClick={()=> handleChange(todoItem.id)}>{todoItem.todo}</label>
             <FaTrashAlt 
