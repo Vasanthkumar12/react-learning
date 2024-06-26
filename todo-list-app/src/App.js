@@ -3,6 +3,7 @@ import Content from './Content';
 import Header from './Header';
 import Footer from './Footer';
 import { useState } from 'react'
+import AddItem from './AddItem';
 
 function App() {
   const [todos, setTodos] = useState(
@@ -35,9 +36,33 @@ function App() {
       setTodos(todoss)
   }
 
+  const [addItem, setAddItem] = useState('Jesus')
+
+  let handleSubmit = (e) => {
+    e.preventDefault()
+    if(!addItem) return
+    console.log(addItem)
+    // Add todo in the existing list
+    addTodo(addItem)
+    setAddItem('')
+    
+  }
+
+  const addTodo = (todo) => {
+    let id = todos.length ? (todos[todos.length - 1].id + 1) : 1
+    let newTodo = {id, checked: false, todo}
+    let listOfTodos = [...todos, newTodo]
+    setTodos(listOfTodos)
+  }
+
   return (
     <div id="container">
       <Header title= "Todo List for My daily Acts"/>
+      <AddItem 
+        addItem = {addItem}
+        setAddItem = {setAddItem}
+        handleSubmit = {handleSubmit}
+      />
       <Content 
         todos = {todos}
         handleChange = {handleChange}
