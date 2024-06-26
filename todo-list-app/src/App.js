@@ -7,33 +7,19 @@ import AddItem from './AddItem';
 
 function App() {
   const [todos, setTodos] = useState(
-    [
-        { 
-            id: 1,
-            checked: true,
-            todo: "Reading Bible reading"
-        },
-        {
-            id:2,
-            checked: false,
-            todo: "Praying"
-        },
-        {
-            id: 3,
-            checked: true,
-            todo: "React Learning"
-        }
-    ]
+      JSON.parse(localStorage.getItem('todos'))
   )   
 
   let handleChange = (id) => {
       let todoss = todos.map(todo => todo.id===id? {...todo, checked: !todo.checked} : todo)
       setTodos(todoss)
+      localStorage.setItem('todos', JSON.stringify(todoss))
   }
 
   let handleDelete = (id) => {
       let todoss = todos.filter(todo => todo.id !== id )
       setTodos(todoss)
+      localStorage.setItem('todos', JSON.stringify(todoss))
   }
 
   const [addItem, setAddItem] = useState('Jesus')
@@ -53,6 +39,7 @@ function App() {
     let newTodo = {id, checked: false, todo}
     let listOfTodos = [...todos, newTodo]
     setTodos(listOfTodos)
+    localStorage.setItem('todos', JSON.stringify(listOfTodos))
   }
 
   return (
