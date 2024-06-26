@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { useState } from 'react'
 import AddItem from './AddItem';
+import SearchItem from './SearchItem';
 
 function App() {
   const [todos, setTodos] = useState(
@@ -42,6 +43,9 @@ function App() {
     localStorage.setItem('todos', JSON.stringify(listOfTodos))
   }
 
+  // Search Todo Item
+  const [search, setsearch] = useState('Jesu')
+
   return (
     <div id="container">
       <Header title= "Todo List for My daily Acts"/>
@@ -50,8 +54,12 @@ function App() {
         setAddItem = {setAddItem}
         handleSubmit = {handleSubmit}
       />
+      <SearchItem 
+        search = {search}
+        setSearch = {setsearch}
+      />
       <Content 
-        todos = {todos}
+        todos = {todos.filter(todo => (todo.todo).toLowerCase().includes(search.toLowerCase()))}
         handleChange = {handleChange}
         handleDelete = {handleDelete}
       />
