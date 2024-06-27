@@ -2,14 +2,16 @@ import './App.css';
 import Content from './Content';
 import Header from './Header';
 import Footer from './Footer';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import AddItem from './AddItem';
 import SearchItem from './SearchItem';
 
 function App() {
-  const [todos, setTodos] = useState(
-      JSON.parse(localStorage.getItem('todos'))
-  )   
+  const [todos, setTodos] = useState([])
+  // let litems = []
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem('todos'))) 
+  }, [])
 
   let handleChange = (id) => {
       let todoss = todos.map(todo => todo.id===id? {...todo, checked: !todo.checked} : todo)
@@ -44,7 +46,7 @@ function App() {
   }
 
   // Search Todo Item
-  const [search, setsearch] = useState('Jesu')
+  const [search, setsearch] = useState('')
 
   return (
     <div id="container">
