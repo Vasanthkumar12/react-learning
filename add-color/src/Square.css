@@ -1,0 +1,16 @@
+#square {
+    margin: 60px 0px 0px 200px;
+    border: 3px solid black;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px rgb(106, 106, 106);
+}
+
+#para1 {
+    margin-top: 80px;
+}
+
+#para2 {
+    margin-top: -20px;
+}
