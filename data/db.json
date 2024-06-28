@@ -1,0 +1,19 @@
+{
+    "todos" : [
+        {
+            "id" : 1,
+            "checked" : false,
+            "todo" : "React Learning"
+        },
+        {
+            "id" : 2,
+            "checked" : false,
+            "todo" : "Ruby on Rails Learning"
+        },
+        {
+            "id" : 3,
+            "checked" : false,
+            "todo" : "Javascript Learning"
+        }
+    ]
+}

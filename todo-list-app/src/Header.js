@@ -9,6 +9,6 @@ export default function Header(props) {
   )
 }
 
-Header.defaultProps = {
-  title: "Todo List Default"
-}
+// Header.defaultProps = {
+//   title: "Todo List Default"
+// }
