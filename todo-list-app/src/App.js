@@ -54,10 +54,21 @@ function App() {
       if(result) setFetchError(result)
   }
 
-  let handleDelete = (id) => {
+  let handleDelete = async (id) => {
       let todoss = todos.filter(todo => todo.id !== id )
       setTodos(todoss)
       // localStorage.setItem('todos', JSON.stringify(todoss))
+
+      let todoItem = todoss.find(todo => todo.id === id)
+      let deleteTodo = {
+        method: 'DELETE',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify(todoItem)
+      }
+
+      let reqURL = `${API_URL}/${id}`
+      let result = await apiRequest(reqURL, deleteTodo)
+      if(result) setFetchError(result)
   }
 
   const [addItem, setAddItem] = useState('Jesus')

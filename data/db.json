@@ -7,18 +7,13 @@
     },
     {
       "id": "2",
-      "checked": true,
-      "todo": "Jesus is my Personal Saviour"
+      "checked": false,
+      "todo": "Jesus chirist"
     },
     {
       "id": "3",
-      "checked": true,
-      "todo": "Allelujah"
-    },
-    {
-      "id": "4",
       "checked": false,
-      "todo": "Praise Jesus"
+      "todo": "Jesus is my Personal Saviour"
     }
   ]
 }
