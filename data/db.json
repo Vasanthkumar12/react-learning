@@ -1,19 +1,24 @@
 {
-    "todos" : [
-        {
-            "id" : 1,
-            "checked" : false,
-            "todo" : "React Learning"
-        },
-        {
-            "id" : 2,
-            "checked" : false,
-            "todo" : "Ruby on Rails Learning"
-        },
-        {
-            "id" : 3,
-            "checked" : false,
-            "todo" : "Javascript Learning"
-        }
-    ]
+  "todos": [
+    {
+      "id": "1",
+      "checked": false,
+      "todo": "Jesus"
+    },
+    {
+      "id": "2",
+      "checked": true,
+      "todo": "Jesus is my Personal Saviour"
+    },
+    {
+      "id": "3",
+      "checked": true,
+      "todo": "Allelujah"
+    },
+    {
+      "id": "4",
+      "checked": false,
+      "todo": "Praise Jesus"
+    }
+  ]
 }
