@@ -61,9 +61,7 @@ function App() {
 
       let todoItem = todoss.find(todo => todo.id === id)
       let deleteTodo = {
-        method: 'DELETE',
-        headers: {'Content-Type' : 'application/json'},
-        body: JSON.stringify(todoItem)
+        method: 'DELETE'
       }
 
       let reqURL = `${API_URL}/${id}`
